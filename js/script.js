@@ -22,7 +22,9 @@ const images = [
         text: "Marvel's Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.", //testo
     }
 ];
-const imgElement = document.getElementById("img"); //immagine del carosello
+const imgElement = document.getElementById("img"); //immagine del carosello nel DOM
+const titleElement = document.getElementById("title"); //titolo dell'immagine nel DOM
+const textElement = document.getElementById("text"); //testo dell'immagine nel DOM
 const btnLeft = document.getElementById("btn-left"); //bottone per andare indietro con le immagini del carosello
 const btnRight = document.getElementById("btn-right"); //bottone per andare avanti con le immagini del carosello
 let index = 0; //indice
@@ -38,11 +40,15 @@ btnRight.addEventListener("click", function() {
         index++; //incremento l'indice
         console.log("Indice dopo l'incremento: " + index); //stampa dell'indice dopo l'incremento
         imgElement.src = images[index].image; //cambio l'immagine
+        titleElement.innerHTML = images[index].title; //cambio il titolo
+        textElement.innerHTML = images[index].text; //cambio il testo
     } else if (index == (images.length - 1)) { //altrimenti se l'indice è uguale alla lunghezza dell'array di immagini
         console.log("Indice prima dell'azzeramento: " + index); //stampa dell'indice prima dell'azzeramento
         index = 0; //azzero l'indice
         console.log("Indice dopo l'azzeramento: " + index); //stampa dell'indice dopo dell'azzeramento
         imgElement.src = images[index].image; //cambio l'immagine
+        titleElement.innerHTML = images[index].title; //cambio il titolo
+        textElement.innerHTML = images[index].text; //cambio il testo
     }
 });
 
@@ -54,10 +60,14 @@ btnLeft.addEventListener("click", function() {
         index--; //decremento l'indice
         console.log("Indice dopo il decremento: " + index); //stampa dell'indice dopo il decremento
         imgElement.src = images[index].image; //cambio l'immagine
+        titleElement.innerHTML = images[index].title; //cambio il titolo
+        textElement.innerHTML = images[index].text; //cambio il testo
     } else if (index == 0) { //altrimenti se l'indice è uguale a 0
         console.log("Indice prima di andare nell'ultima posizione: " + index); //stampa dell'indice prima di andare nell'ultima posizione dell'array di immagini
         index = images.length - 1; //assegno all'indice il valore della lunghezza dell'array di immagini meno 1
         console.log("Indice dopo essere andato nell'ultima posizione: " + index); //stampa dell'indice dopo essere andato nell'ultima posizione dell'array di immagini
         imgElement.src = images[index].image; //cambio l'immagine
+        titleElement.innerHTML = images[index].title; //cambio il titolo
+        textElement.innerHTML = images[index].text; //cambio il testo
     }
 });
