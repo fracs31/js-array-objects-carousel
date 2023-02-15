@@ -90,4 +90,4 @@ setInterval(function() {
         titleElement.innerHTML = images[index].title; //cambio il titolo
         textElement.innerHTML = images[index].text; //cambio il testo
     }
-}, 5000);
+}, 3000);
