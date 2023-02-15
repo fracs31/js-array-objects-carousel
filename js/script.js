@@ -28,6 +28,7 @@ const textElement = document.getElementById("text"); //testo dell'immagine nel D
 const btnLeft = document.getElementById("btn-left"); //bottone per andare indietro con le immagini del carosello
 const btnRight = document.getElementById("btn-right"); //bottone per andare avanti con le immagini del carosello
 let index = 0; //indice
+let time = 3000; //tempo di scorrimento delle immagini
 
 console.log(images); //stampo l'array con le immagini del carosello
 console.log("Indice di partenza: " + index); //stampa dell'indice di partenza
@@ -90,4 +91,4 @@ setInterval(function() {
         titleElement.innerHTML = images[index].title; //cambio il titolo
         textElement.innerHTML = images[index].text; //cambio il testo
     }
-}, 3000);
+}, time);
