@@ -2,7 +2,7 @@
 const images = [
     {
         image: "./img/01.webp", //immagine
-        title: "Marvel's Spiderman Miles Morale", //titolo
+        title: "Marvel's Spiderman Miles Morales", //titolo
         text: "Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.", //testo
     }, {
         image: "./img/02.webp", //immagine
